@@ -8,7 +8,7 @@ const form = document.getElementById('registrationForm');
     };
 
     const validateUSN = (usn) => {
-        const usnPattern = /^4(mw|MW)2[0-9](cs|CS)\d{3}$/;
+        const usnPattern = /^4(mw|MW)21(cs|CS)\d{3}$/;
       return usnPattern.test(usn);
     };
 
@@ -22,7 +22,7 @@ const form = document.getElementById('registrationForm');
       }
 
       if (!validateUSN(formData.get('usn'))) {
-        showModal('Invalid USN format. Please use 4mw2Xcs000 format.');
+        showModal('Invalid USN format. Please use 4mw21cs000 format.');
         return;
       }
 
