@@ -9,16 +9,18 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="style.css">
+ 
 </head>
 
 <body>
-    <nav>
-        
-        <h1 >SMVITM </h1>
+    <nav >
+        <div >
+            <h1 >SMVITM </h1>
+        </div>
         
             
-            <button >Register<svg fill="none" viewBox="0 0 20 20">
-                <path fill="#111"
+            <button type="button"  id="fsecond" >Register<svg  fill="none" viewBox="0 0 20 20">
+                <path fill="#111" 
                 d="M2.5 14.375V17.5h3.125l9.217-9.217-3.125-3.125L2.5 14.375Zm14.758-8.508a.83.83 0 0 0 0-1.175l-1.95-1.95a.83.83 0 0 0-1.175 0l-1.525 1.525 3.125 3.125 1.525-1.525Z">
             </path>
         </svg></button>
@@ -30,7 +32,7 @@
     <div id="main">
         <div id="page1">
             <h1><i>JAVAScript</i></h1>
-            <h1>Worksh<span><svg class="c-bttn__morph" fill="none" viewBox="0 0 131 136">
+            <h1>Worksh<span onclick="gotoo()" ><svg class="c-bttn__morph" fill="none" viewBox="0 0 131 136">
                         <path class="g-path" data-morph="end" fill="#111"
                             d="M48 77.457v7.224h7.224l21.307-21.306-7.224-7.225L48 77.457Zm34.118-19.67a1.919 1.919 0 0 0 0-2.716l-4.508-4.508a1.919 1.919 0 0 0-2.716 0l-3.526 3.526 7.224 7.224 3.526-3.525Z">
                         </path>
@@ -39,7 +41,7 @@
                             data-original="M65.72 109.14c10.08 0 17.76-3.78 23.04-11.34 5.4-7.68 8.1-17.64 8.1-29.88 0-12.24-2.7-22.2-8.1-29.88-5.28-7.68-12.96-11.52-23.04-11.52-9.96 0-17.7 3.84-23.22 11.52-5.4 7.68-8.1 17.64-8.1 29.88 0 12.12 2.7 22.02 8.1 29.7 5.52 7.68 13.26 11.52 23.22 11.52Zm46.08 7.02c-11.64 12.6-27.06 18.9-46.26 18.9s-34.62-6.3-46.26-18.9C7.76 103.56 2 87.48 2 67.92c0-19.56 5.76-35.64 17.28-48.24C30.92 7.08 46.34.78 65.54.78s34.62 6.3 46.26 18.9c11.64 12.6 17.46 28.68 17.46 48.24 0 19.56-5.82 35.64-17.46 48.24Z">
                         </path>
                     </svg></span>p</h1>
-                    <button id="second">Register
+                    <button type="button" id="second" >Register
                     </svg></button>
         </div>
         <div id="page2">
@@ -108,7 +110,7 @@
                 <div class="form-container">
                     <h2>Registration</h2>
                     <p>Fill in your details to get started</p>
-                    <form>
+                    <form id="registrationForm">
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Name" required>
                         </div>
@@ -139,9 +141,21 @@
                     </form>
                 </div>
             </div>
+            
         </div>
         
     </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <div class="text-center">
+            <p id="modalMessage" class="mb-4 text-gray-300"></p>
+            <button  id='modalb'onclick="closeModal()" class="py-2 px-4 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-full hover:from-green-600 hover:to-teal-600 transition duration-300 shadow-lg">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <script src="api.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="

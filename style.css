@@ -30,7 +30,8 @@ nav {
     padding: 2vw 10.4vw;
     justify-content: space-between;
     background-color: #fff;
-    z-index: 10;
+    position: relative;
+    z-index: 1;
     /* color:#111; */
 }
 
@@ -39,6 +40,9 @@ nav h1 {
     color:#111;
     font-weight: 10;
     margin-right: 80px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
 }
 nav button {
     background-color: #0BA34E;
@@ -52,6 +56,9 @@ nav button {
     border-radius: 50px;
     border: none;
     width: 11%;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
     /* margin-bottom: 90px; */
 }
 nav button svg {
@@ -166,7 +173,7 @@ nav button svg {
     /* background-color: #333; */
 }
 
-.btn-pointer{
+#btn-pointer{
     cursor: pointer;
 }
 
@@ -236,6 +243,7 @@ nav button svg {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 #blue-btn h4 {
@@ -353,6 +361,7 @@ input::placeholder {
 
 button:hover {
     background-color: #057234;;
+    cursor: pointer;
 }
 input#name:hover {
     background:black;
@@ -425,6 +434,7 @@ select#year:hover {
     nav button {
         display: none;
         height: 0vh;
+        cursor: pointer;
     }
     #nav-bottom {
         width: 100%;
@@ -696,3 +706,56 @@ select#year:hover {
 }
 
 }
+
+
+/* modal */
+/* General modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  .modal.active {
+    display: flex;
+  }
+  
+  .modal-content {
+    background: #1a202c; /* Tailwind's bg-gray-900 */
+    color: #fff;
+    border-radius: 0.5rem; /* Tailwind's rounded-lg */
+    padding: 2rem; /* Tailwind's p-8 */
+    max-width: 90%; /* Responsive max-width */
+    width: 100%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-lg */
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Additional styles for mobile responsiveness */
+  @media (max-width: 640px) {
+    .modal-content {
+      padding: 1.5rem; /* Tailwind's p-6 for smaller screens */
+    }
+  }
+  
+  /* Button styles */
+  #modalb {
+    display: inline-block;
+    padding: 0.5rem 1rem; /* Tailwind's py-2 px-4 */
+    background: linear-gradient(to right, #10b981, #14b8a6); /* Tailwind's bg-gradient-to-r from-green-500 to-teal-500 */
+    color: #fff; /* Tailwind's text-white */
+    border-radius: 9999px; /* Tailwind's rounded-full */
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-lg */
+  }
+  
+  #modalb:hover {
+    background: linear-gradient(to right, #059669, #0d9488); /* Tailwind's hover:from-green-600 hover:to-teal-600 */
+    transform: translateY(-2px); /* Subtle lift on hover */
+  }
+  
