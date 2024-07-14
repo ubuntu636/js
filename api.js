@@ -26,24 +26,25 @@ const form = document.getElementById('registrationForm');
         return;
       }
 
-      try {
-        const response = await fetch('https://workshop-frgm.onrender.com/api/form', {
-          method: 'POST',
-          body: JSON.stringify(Object.fromEntries(formData)),
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
-        const result = await response.json();
-        showModal(result.msg);
-        form.reset();
-      } catch (error) {
-        showModal('Error saving data. Please try again.');
-      }
+    //   try {
+    //     const response = await fetch('https://workshop-frgm.onrender.com/api/form', {
+    //       method: 'POST',
+    //       body: JSON.stringify(Object.fromEntries(formData)),
+    //       headers: {
+    //         'Content-Type': 'application/json'
+    //       }
+    //     });
+    //     const result = await response.json();
+    //     showModal(result.msg);
+    //     form.reset();
+    //   } catch (error) {
+    //     showModal('Error saving data. Please try again.');
+    //   }
     });
 
     const showModal = (message) => {
-      modalMessage.textContent = message;
+      // modalMessage.textContent = message;
+      modalMessage.textContent = "SLOTS ARE FULL SORRY!! Better luck next time...!";
       modal.classList.add('active');
     };
 
@@ -65,3 +66,4 @@ function gotoo(){
     document.getElementById('page4').scrollIntoView({ behavior: 'smooth' });
 
 }
+// const form = document.getElementById('registrationForM');
