@@ -35,7 +35,8 @@ const form = document.getElementById('registrationForm');
     //       }
     //     });
     //     const result = await response.json();
-        showModal(result.msg);
+        let result="SLOTS ARE FULL SORRY!! Better luck next time...!";
+        showModal(result);
     //     form.reset();
     //   } catch (error) {
     //     showModal('Error saving data. Please try again.');
@@ -43,8 +44,8 @@ const form = document.getElementById('registrationForm');
     });
 
     const showModal = (message) => {
-      // modalMessage.textContent = message;
-      modalMessage.textContent = "SLOTS ARE FULL SORRY!! Better luck next time...!";
+      modalMessage.textContent = message;
+      // modalMessage.textContent = "SLOTS ARE FULL SORRY!! Better luck next time...!";
       modal.classList.add('active');
     };
 
