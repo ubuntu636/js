@@ -8,7 +8,7 @@ const form = document.getElementById('registrationForm');
     };
 
     const validateUSN = (usn) => {
-        const usnPattern = /^4(mw|MW)21(cs|CS)\d{3}$/;
+        const usnPattern = /^4(mw|MW)22(cs|CS)\d{3}$/;
       return usnPattern.test(usn);
     };
 
