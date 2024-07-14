@@ -35,7 +35,7 @@ const form = document.getElementById('registrationForm');
     //       }
     //     });
     //     const result = await response.json();
-        let result="SLOTS ARE FULL SORRY!! Better luck next time...!";
+        let result="SLOTS ARE FULL SORRY!!!";
         showModal(result);
     //     form.reset();
     //   } catch (error) {
