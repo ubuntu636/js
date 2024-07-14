@@ -35,7 +35,7 @@ const form = document.getElementById('registrationForm');
     //       }
     //     });
     //     const result = await response.json();
-    //     showModal(result.msg);
+        showModal(result.msg);
     //     form.reset();
     //   } catch (error) {
     //     showModal('Error saving data. Please try again.');
